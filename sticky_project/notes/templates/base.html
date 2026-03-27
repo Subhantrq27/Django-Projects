@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<nav>
+<a href="/notes/">Notes</a>
+{% if user.is_authenticated %}
+<a href="/logout/">Logout</a>
+{% else %}
+<a href="/login/">Login</a>
+{% endif %}
+</nav>
+<hr>
+{% block content %}{% endblock %}
+</body>
+</html>
